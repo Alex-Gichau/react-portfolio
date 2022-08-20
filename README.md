@@ -1,4 +1,4 @@
-# react-portfolio
+# My First React Project
 
-Follow through: 
+Following through: 
 https://youtu.be/G-Cr00UYokU
