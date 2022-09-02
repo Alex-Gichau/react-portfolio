@@ -1,0 +1,19 @@
+{
+  "name": "alexg-react",
+  "version": "1.0.0",
+  "description": "Alex Gichau Portfolio with React JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Gichau",
+  "license": "UNLICENSED",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "alexgeeshau"
+  },
+  "dependencies": {
+    "react-icons": "^4.4.0"
+  }
+}
