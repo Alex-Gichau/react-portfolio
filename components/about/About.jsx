@@ -1,12 +1,10 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import './about.css'
 
-const About = props => {
+const About = () => {
   return (
     <div>About</div>
   )
 }
-
-About.propTypes = {}
 
 export default About
