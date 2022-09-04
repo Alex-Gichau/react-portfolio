@@ -22,9 +22,10 @@ header {
 /* HEADER SOCIALS */
 .header__socials {
     display: flex;
+    font-size: 1.6rem;
     flex-direction: column;
     align-items: center;
-    gap:0.5rem;
+    gap:1rem;
     position: absolute;
     left:0;
     bottom: 3rem;
@@ -80,8 +81,6 @@ header {
         display: none;
     }
     
-
-
 }
 
 
