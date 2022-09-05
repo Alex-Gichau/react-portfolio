@@ -11,11 +11,11 @@ const Nav = () => {
   const [activeNav, setActiveNav] = useState('#')
   return (
     <nav>
-    <a href="#" onClick={() => setActiveNav("#")} className={activeNav === '#' ? 'active' : ''}><RiHome6Line/></a>
-    <a href="#about" onClick={() => setActiveNav('#about')} className={activeNav === '#about' ? 'active' : ''}><FaRegUser/></a>
-    <a href="#experience" onClick={() => setActiveNav('#experience')} className={activeNav === '#experience' ? 'active' : ''}><RiComputerLine/></a>
-    <a href="#services" onClick={() => setActiveNav('#services')} className={activeNav === '#services' ? 'active' : ''}><MdMiscellaneousServices/></a>
-    <a href="#contact" onClick={() => setActiveNav('#contact')} className={activeNav === '#contact' ? 'active' : ''}><FiPhoneCall/></a>
+    <a href="#" rel="noreferrer" onClick={() => setActiveNav("#")} className={activeNav === '#' ? 'active' : ''}><RiHome6Line/></a>
+    <a href="#about" rel="noreferrer" onClick={() => setActiveNav('#about')} className={activeNav === '#about' ? 'active' : ''}><FaRegUser/></a>
+    <a href="#experience" rel="noreferrer" onClick={() => setActiveNav('#experience')} className={activeNav === '#experience' ? 'active' : ''}><RiComputerLine/></a>
+    <a href="#service" rel="noreferrer" onClick={() => setActiveNav('#services')} className={activeNav === '#services' ? 'active' : ''}><MdMiscellaneousServices/></a>
+    <a href="#contacts" rel="noreferrer" onClick={() => setActiveNav('#contact')} className={activeNav === '#contact' ? 'active' : ''}><FiPhoneCall/></a>
     </nav>    
   )
 }
