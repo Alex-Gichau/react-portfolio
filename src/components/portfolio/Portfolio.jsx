@@ -61,7 +61,7 @@ const Portfolio = () => {
             return (
               <article key={id} className='portfolio__item'>
           <div className='portfolio__item-image'>
-            <img src={IMG1} alt={title} />
+            <img src={image} alt={title} />
           </div>
           <h3>{title}</h3>
           <div className='portfolio__item-cta'>
@@ -71,7 +71,7 @@ const Portfolio = () => {
             <a
               href={demo}
               className='btn btn-primary'
-              target='_blank'
+              target='_blank' rel="noreferrer"
             >
               Live Demo
             </a>
