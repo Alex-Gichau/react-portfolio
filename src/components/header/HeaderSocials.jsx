@@ -3,6 +3,7 @@ import {AiFillLinkedin} from 'react-icons/ai'
 import {SiGithub} from 'react-icons/si'
 import {AiFillBehanceCircle} from 'react-icons/ai'
 import {VscTwitter} from 'react-icons/vsc'
+import {AiFillInstagram} from 'react-icons/ai'
 
 
 const HeaderSocials = () => {
@@ -12,6 +13,7 @@ const HeaderSocials = () => {
         <a href="https://github.com/Alex-Gichau" target="_blank"><SiGithub/></a>
         <a href="https://behance.net/mburugichau" target="_blank"><AiFillBehanceCircle/></a>
         <a href="https://twitter.com/alexgeeshau" target="_blank"><VscTwitter/></a>
+        <a href="https://www.instagram.com/geeshau_art/" target="_blank"><AiFillInstagram/></a>
 
     </div>
   )

@@ -2,6 +2,8 @@ import React from 'react';
 import './portfolio.css';
 import IMG1 from '../../assets/alex2.png';
 
+
+// Array containing PORTFOLIOS -- 
 const data = [
   {
     id:1,
