@@ -9,11 +9,11 @@ import emailjs from 'emailjs-com'
 const contacts = () => {
   const form = useRef(); 
   
-
+  // TODO #5: Email-JS not working/Functional
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_54p30sh', 'service_54p30sh', form.current, 'Kwp5yxK7R-8N17Tk9')
+    emailjs.sendForm('service_54p30sh', form.current, 'Kwp5yxK7R-8N17Tk9')
 
     e.target.reset()
 
@@ -56,13 +56,14 @@ const contacts = () => {
 
         </div>
         {/* END OF CONTACT OPTIONS */}
+
         <form ref={form} onSubmit={sendEmail}>
           <input type='text' name="name" placeholder="Your Full Name" required/>
           <input type="email" name="email" placeholder="Your Email" required/>
           <textarea name="message" rows="7" placeholder="Your Message" required></textarea>
-          <button type="submit" className='btn btn-primary'>Send Message</button>
-          
+          <button type="submit" className='btn btn-primary'>Send Message</button>  
         </form>
+
       </div>
       
     </section>

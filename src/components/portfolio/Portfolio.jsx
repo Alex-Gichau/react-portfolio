@@ -1,6 +1,6 @@
 import React from 'react';
 import './portfolio.css';
-import IMG1 from '../../assets/alex2.png';
+import IMG1 from '../../assets/cam.jpg';
 
 
 // Array containing PORTFOLIOS -- 
