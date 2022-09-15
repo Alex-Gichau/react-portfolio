@@ -3,13 +3,13 @@ import './contacts.css'
 import {MdAlternateEmail} from 'react-icons/md'
 import {TbBrandTwitter} from 'react-icons/tb'
 import {BsWhatsapp} from 'react-icons/bs'
-import {useRef}from 'react';
+import {UseRef}from 'react';
 import emailjs from 'emailjs-com'
 
 const contacts = () => {
-  const form = useRef(); 
+  const form = UseRef(); 
   
-  // TODO #5: Email-JS not working/Functional
+  // TODO #6
   const sendEmail = (e) => {
     e.preventDefault();
 
