@@ -1,6 +1,6 @@
 import React from 'react';
 import './about.css';
-import ME from '../../assets/logo.png';
+// import ME from '../../assets/logo.png';
 import {BsFillAwardFill} from 'react-icons/bs'
 import {TbBuildingSkyscraper} from 'react-icons/tb';
 
