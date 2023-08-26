@@ -30,23 +30,23 @@ const data = [
   },
   {
     id:4,
-    image:'https://i.ytimg.com/an_webp/Xa97087O8D0/mqdefault_6s.webp?du=3000&sqp=CK_5pqcG&rs=AOn4CLArM6UdBW060aPAyIMxi52vbIcLMQ',
-    title:'Red Shoes Animation | WOZA KIDS',
+    image:'https://i.ytimg.com/an_webp/YbCyjzBuyug/mqdefault_6s.webp?du=3000&sqp=CLD3qKcG&rs=AOn4CLBNb3rFxZXRQvK4jFsRRUcpdfOOHg',
+    title:'The State of MISSOURI | Counties of MISSOURI',
     link:'https://www.youtube.com/watch?v=Xa97087O8D0&t=64s', 
     //todo: Create embedded frame for the elements in the link - Do for all
     preview:'https://www.youtube.com/watch?v=Xa97087O8D0&t=64s'
   },
   {
     id:5,
-    image:'https://i.ytimg.com/an_webp/G1p_6FHlzx8/mqdefault_6s.webp?du=3000&sqp=COzypqcG&rs=AOn4CLDd7Ciq5750Wvo8vTwRrfSSIidi2g',
-    title:'Down in my Heart | Nursery rhymes | WOZA KIDS',
+    image:'https://i.ytimg.com/vi/ATkND2NA7o8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAQys_wkS1Bie1zLkKS_mAKrBuguw',
+    title:'Dwarf Planet Song | Nursery Songs',
     link:'https://www.youtube.com/watch?v=BJl2-av9hFo', 
     //todo: Create embedded frame for the elements in the link - Do for all
     preview:'https://www.youtube.com/watch?v=BJl2-av9hFo'
   },
   {
     id:6,
-    image:'https://i.ytimg.com/vi/a8fkw0JJwzg/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYQyATKH8wDw==&rs=AOn4CLDJsGJRWmz1BVqKfKZnyFSN2-LeqA',
+    image:'https://i.ytimg.com/vi/BJl2-av9hFo/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDMsjBxVs2rvBl9WnrQEujPw3Stow',
     title:'Bartolito Songs | Nursery rhymes | WOZA KIDS',
     link:'https://www.youtube.com/watch?v=BJl2-av9hFo', 
     //todo: Create embedded frame for the elements in the link - Do for all
@@ -54,15 +54,15 @@ const data = [
   },
   {
     id:7,
-    image:'https://i.ytimg.com/an_webp/yeG86jp5brM/mqdefault_6s.webp?du=3000&sqp=CMLNpqcG&rs=AOn4CLB-PpTTFUXyfI7M14rjLOkikwBxbQ',
-    title:'5 Oceans Song | Nursery Rhymes | WOZA KIDS',
+    image:'https://i.ytimg.com/vi/bwHKm3PoUtA/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhyIFkoLjAP&rs=AOn4CLBpgWHibkvbHj-RNT1KJo4W2G_b2w',
+    title:'Ants Marching Song | Nursery Rhymes | Kids Songs Lyric',
     link:'https://www.youtube.com/watch?v=BJl2-av9hFo', 
     //todo: Create embedded frame for the elements in the link - Do for all
     preview:'https://www.youtube.com/@WozaKids'
   },
   {
     id:8,
-    image:'https://i9.ytimg.com/vi/Q2-nAoV8VAY/mqdefault.jpg?sqp=CLyAp6cG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgSihCMA8=&rs=AOn4CLArHTgjugasKtIFhQnI8HHuncD6QA',
+    image:'https://i.ytimg.com/an_webp/pcV35LlQrc8/mqdefault_6s.webp?du=3000&sqp=CLafqacG&rs=AOn4CLCM--M_YhE2Gfbm85E4pHS_uCW7Rw',
     title:'Brigade Report Video | PCEA Juja Township',
     link:'https://www.youtube.com/@pceajujatownship', 
     //todo: Create embedded frame for the elements in the link - Do for all
@@ -70,11 +70,11 @@ const data = [
   },
   {
     id:9,
-    image:'https://i9.ytimg.com/vi/kvsutIuh6F4/mqdefault.jpg?sqp=CLyAp6cG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGEEgOih_MA8=&rs=AOn4CLDSYHFvadWzzKszrBLl_5nsAnt9Ng',
-    title:'Nifanye Kama Wewe | Unifinyange | PCEA Juja Township',
-    link:'https://www.youtube.com/@pceajujatownship', 
+    image:'https://i.ytimg.com/vi/pFD3jTD4XQU/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLA5Glh-s9IcGkM07G-L6i3BGVe4-g',
+    title:'PCEA Juja Township Branding',
+    link:'https://www.youtube.com/@WozaKids', 
     //todo: Create embedded frame for the elements in the link - Do for all
-    preview:'https://www.youtube.com/@pceajujatownship'
+    preview:'https://www.youtube.com/@WozaKids'
   }
 ]
 
