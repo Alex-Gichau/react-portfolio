@@ -6,7 +6,7 @@
  
 .portfolio__item {
     background: var(--color-bg-variant);
-    padding: 1.3rem;
+    padding: 1rem;
     border-radius: 2rem;
     border: 1px solid transparent;
     transition: var(--transition);
@@ -20,7 +20,8 @@
 .portfolio__item-image {
     border-radius: 1.5rem;
     overflow: hidden;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1.5/1;
+    display: flex;
 }
 
 .portfolio__item h3 {

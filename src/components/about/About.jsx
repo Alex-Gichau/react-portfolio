@@ -39,10 +39,7 @@ const About = () => {
           </div>
 
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-            aperiam quasi modi sint dolorum atque deleniti consequuntur itaque
-            cum! Beatae, earum impedit. Dolor, delectus mollitia. Ea facilis
-            placeat quasi beatae!
+          I am a professional software engineer and self-taught graphic designer and animator. My lifelong passion for IT drives me to excel in diverse roles. With corporate experience under my belt, I am eager to discuss how my skills and enthusiasm align with your team's vision. Looking forward to connecting soon.
           </p>
 
           <a href="#contact" className='btn btn-primary'>Let's Talk</a>
