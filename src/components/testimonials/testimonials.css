@@ -1,5 +1,8 @@
 .container.testimonials__container {
         padding-bottom: 4rem;
+        aspect-ratio: 1/1;
+        height: 30rem;
+        overflow-wrap: normal;
 }
 
 .client__avatar {
@@ -17,6 +20,7 @@
     padding: 2rem;
     border-radius: 2rem;
     user-select: none;
+    
 }
 
 .client__review {

@@ -3,28 +3,30 @@ import { MdAlternateEmail } from 'react-icons/md';
 import { TbBrandTwitter } from 'react-icons/tb';
 import { BsWhatsapp } from 'react-icons/bs';
 import { useRef } from 'react';
+import './contacts.css';
 import emailjs from 'emailjs-com';
 
 
-export default function Contacts() {
-  const form = useRef(0);
+const Contacts = () => {
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+    const form = useRef(0);
 
-    emailjs.sendForm('service_54p30sh', 'service_54p30sh', form.current, 'Kwp5yxK7R-8N17Tk9');
+    const sendEmail = (e) => {
+      e.preventDefault();
 
-    e.target.reset()
+      emailjs.sendForm('service_54p30sh', 'service_54p30sh', form.current, 'Kwp5yxK7R-8N17Tk9');
 
-      .then((result) => {
-        console.log(result.text);
-      }, (error) => {
-        console.log(error.text);
-      });
-  };
+      e.target.reset()
 
-  return (
-    <section id="contacts">
+        .then((result) => {
+          console.log(result.text);
+        }, (error) => {
+          console.log(error.text);
+        });
+    };
+
+    return(
+    <section id = "contacts" >
       <h5>Get In Touch</h5>
       <h2>Contact Me</h2>
 
@@ -64,6 +66,8 @@ export default function Contacts() {
         </form>
       </div>
 
-    </section>
+    </section >
   );
-}
+};
+
+export default Contacts;
