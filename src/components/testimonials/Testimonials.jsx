@@ -1,7 +1,7 @@
 import React from 'react';
 import './testimonials.css';
-import Rating from '@mui/material/Rating';
-import Typography from '@mui/material/Typography';
+// import Rating from '@mui/material/Rating';
+// import Typography from '@mui/material/Typography';
 // import AVT1 from '../../assets/avatar.jpg'
 // import Swiper core and required modules
 import { Pagination } from 'swiper';
