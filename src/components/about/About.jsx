@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react';
 import './about.css';
 import ME from '../../assets/alexME.JPG';
@@ -13,7 +14,7 @@ const About = () => {
       <div className='container about__container'>
         <div className='about__me'>
           <div className='about__me-image'>
-            <img src={ME} alt='About Image' />
+            <img src={ME} alt='me' />
           </div>
         </div>
 
