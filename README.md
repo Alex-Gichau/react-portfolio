@@ -1,3 +1,5 @@
+![image](https://github.com/Alex-Gichau/react-portfolio/assets/52883664/329b7aaa-0113-4065-80b0-d619ee0c3d3d)
+
 # About Me
 
 Hello! I'm Alex Gichau, a passionate Software Engineer with a penchant for creativity. 
