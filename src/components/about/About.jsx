@@ -8,7 +8,7 @@ import { TbBuildingSkyscraper } from 'react-icons/tb';
 const About = () => {
   return (
     <section id='about'>
-      <h5>Who is Gichau</h5>
+      <h5>Who is Geeshau</h5>
       <h2>About Me</h2>
 
       <div className='container about__container'>
