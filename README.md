@@ -8,4 +8,7 @@ Hello! I'm Alex Gichau, a passionate Software Engineer with a penchant for creat
 Welcome to my GitHub repository, where I've crafted a portfolio website that showcases my journey through the realms of coding, graphic design, and animation. With a professional background in software engineering and self-taught expertise in graphic design and animation, 
 
 <hr> 
+
 I've merged the worlds of technology and art. Explore my projects, ranging from intricate code structures to captivating visual creations. I believe that technology is a canvas for innovation, and my work reflects this synergy. Join me on this exciting voyage of pixels, lines of code, and boundless imagination.
+
+I love Code and designs. 
