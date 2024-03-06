@@ -2,7 +2,7 @@
 
 # About Me
 
-Hello! I'm Alex Gichau, a passionate Software Engineer with a penchant for creativity. 
+Hello! I'm Alex Gichau, a passionate Software Engineer with a penchant for creativity and an eye for design. 
 
 <hr>
 Welcome to my GitHub repository, where I've crafted a portfolio website that showcases my journey through the realms of coding, graphic design, and animation. With a professional background in software engineering and self-taught expertise in graphic design and animation.
