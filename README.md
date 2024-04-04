@@ -12,3 +12,5 @@ Welcome to my GitHub repository, where I've crafted a portfolio website that sho
 I've merged the worlds of technology and art. Explore my projects, ranging from intricate code structures to captivating visual creations. I believe that technology is a canvas for innovation, and my work reflects this synergy. Join me on this exciting voyage of pixels, lines of code, and boundless imagination.
 
 I love Code and designs. 
+
+Showcase projects as this  https://www.ayalab.xyz/all-projects/5b033401-f344-46f4-a6dd-ab80505b2c07
