@@ -1,16 +1,36 @@
-![image](https://github.com/Alex-Gichau/react-portfolio/assets/52883664/329b7aaa-0113-4065-80b0-d619ee0c3d3d)
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-# About Me
+## Getting Started
 
-Hello! I'm Alex Gichau, a passionate Software Engineer with a penchant for creativity and an eye for design. 
+First, run the development server:
 
-<hr>
-Welcome to my GitHub repository, where I've crafted a portfolio website that showcases my journey through the realms of coding, graphic design, and animation. With a professional background in software engineering and self-taught expertise in graphic design and animation.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-<hr> 
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-I've merged the worlds of technology and art. Explore my projects, ranging from intricate code structures to captivating visual creations. I believe that technology is a canvas for innovation, and my work reflects this synergy. Join me on this exciting voyage of pixels, lines of code, and boundless imagination.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-I love Code and designs. 
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-Showcase projects as this  https://www.ayalab.xyz/all-projects/5b033401-f344-46f4-a6dd-ab80505b2c07
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
