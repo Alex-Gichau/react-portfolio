@@ -12,7 +12,7 @@ export const LINKS = {
   linkedin: "#",
   twitter: "#",
   resume: "/resume.pdf",
-  behance: "https://www.behance.net/mburugichau",
+  behance: "https://www.behance.net/geeshauart",
   playbook: "https://www.playbook.com/geeshauposters",
 };
 

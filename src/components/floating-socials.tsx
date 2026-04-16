@@ -3,18 +3,19 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { LINKS } from "@/lib/data";
 
-const SOCIALS = [
-  { name: "GitHub", slug: "github", url: "https://github.com/Alex-Gichau" },
-  { name: "Behance", slug: "behance", url: "https://www.behance.net/mburugichau" },
-  { name: "Instagram", slug: "instagram", url: "#" },
+const SOCIAL_CONFIG = [
+  { name: "GitHub", slug: "github", url: LINKS.github },
+  { name: "Behance", slug: "behance", url: LINKS.behance },
+  { name: "Instagram", slug: "instagram", url: LINKS.instagram || "#" },
   { name: "Pinterest", slug: "pinterest", url: "#" },
 ];
 
 export default function FloatingSocials() {
   return (
     <div className="fixed left-6 bottom-6 z-[40] flex flex-col gap-3">
-      {SOCIALS.map((social, i) => (
+      {SOCIAL_CONFIG.map((social, i) => (
         <motion.a
           key={social.name}
           href={social.url}
