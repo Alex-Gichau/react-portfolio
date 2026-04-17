@@ -4,8 +4,40 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Mail, MessageSquare, Send, Sparkles, ArrowRight } from "lucide-react";
 import { PERSONAL_INFO } from "@/lib/data";
+import { cn } from "@/lib/utils";
 
 export default function Contact() {
+  const [status, setStatus] = React.useState<"idle" | "loading" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus("loading");
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        (e.target as HTMLFormElement).reset();
+      } else {
+        setStatus("error");
+      }
+    } catch (err) {
+      setStatus("error");
+    }
+  };
+
   return (
     <section id="contact" className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
       <div className="glass rounded-[3rem] p-8 md:p-16 relative overflow-hidden">
@@ -17,7 +49,7 @@ export default function Contact() {
           <div>
             <motion.div
               initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20 mb-6 w-fit"
             >
@@ -50,27 +82,34 @@ export default function Contact() {
           </div>
 
           <div className="glass bg-white/5 rounded-[2rem] p-8 border-white/5">
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                      <label className="text-xs font-black uppercase tracking-widest text-foreground/40 ml-1">Name</label>
-                     <input type="text" placeholder="John Doe" className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 focus:outline-none focus:border-accent/50 transition-colors" />
+                     <input required name="name" type="text" placeholder="John Doe" className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 focus:outline-none focus:border-accent/50 transition-colors" />
                   </div>
                   <div className="space-y-2">
                      <label className="text-xs font-black uppercase tracking-widest text-foreground/40 ml-1">Email</label>
-                     <input type="email" placeholder="john@example.com" className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 focus:outline-none focus:border-accent/50 transition-colors" />
+                     <input required name="email" type="email" placeholder="john@example.com" className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 focus:outline-none focus:border-accent/50 transition-colors" />
                   </div>
                </div>
                
                <div className="space-y-2">
                   <label className="text-xs font-black uppercase tracking-widest text-foreground/40 ml-1">Message</label>
-                  <textarea rows={4} placeholder="What's on your mind?" className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 focus:outline-none focus:border-accent/50 transition-colors resize-none"></textarea>
+                  <textarea required name="message" rows={4} placeholder="What's on your mind?" className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 focus:outline-none focus:border-accent/50 transition-colors resize-none"></textarea>
                </div>
 
-               <button className="w-full bg-accent hover:bg-accent/90 text-white font-black py-5 rounded-2xl transition-all shadow-lg shadow-accent/20 flex items-center justify-center gap-3 active:scale-[0.98] group">
-                 Send Message
-                 <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+               <button 
+                 disabled={status === "loading"}
+                 className="w-full bg-accent hover:bg-accent/90 disabled:opacity-50 text-white font-black py-5 rounded-2xl transition-all shadow-lg shadow-accent/20 flex items-center justify-center gap-3 active:scale-[0.98] group"
+               >
+                 {status === "loading" ? "Sending..." : status === "success" ? "Message Sent!" : "Send Message"}
+                 <Send size={18} className={cn("transition-transform", status === "loading" ? "animate-pulse" : "group-hover:translate-x-1 group-hover:-translate-y-1")} />
                </button>
+
+               {status === "error" && (
+                 <p className="text-red-400 text-xs text-center font-bold uppercase tracking-widest">Something went wrong. Please try again.</p>
+               )}
             </form>
           </div>
         </div>
