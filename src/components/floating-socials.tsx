@@ -9,7 +9,7 @@ const SOCIAL_CONFIG = [
   { name: "GitHub", slug: "github", url: LINKS.github },
   { name: "Behance", slug: "behance", url: LINKS.behance },
   { name: "Instagram", slug: "instagram", url: LINKS.instagram || "#" },
-  { name: "Pinterest", slug: "pinterest", url: "#" },
+  { name: "Pinterest", slug: "pinterest", url: LINKS.pinterest || "#" },
 ];
 
 export default function FloatingSocials() {

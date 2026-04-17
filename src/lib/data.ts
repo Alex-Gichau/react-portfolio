@@ -14,6 +14,8 @@ export const LINKS = {
   resume: "/resume.pdf",
   behance: "https://www.behance.net/geeshauart",
   playbook: "https://www.playbook.com/geeshauposters",
+  instagram: "#",
+  pinterest: "#",
 };
 
 export const SKILLS = [
