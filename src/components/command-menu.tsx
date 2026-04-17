@@ -45,12 +45,12 @@ export default function CommandMenu() {
   return (
     <>
       {/* K Toggle Trigger Hint (Bottom Right) */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         className="fixed bottom-6 right-6 z-[40] hidden md:block"
       >
-        <button 
+        <button
           onClick={() => setOpen(true)}
           className="glass aspect-square p-4 rounded-2xl border-white/10 hover:border-accent/50 group transition-all"
         >
@@ -71,7 +71,7 @@ export default function CommandMenu() {
               onClick={() => setOpen(false)}
               className="absolute inset-0 bg-black/60 backdrop-blur-sm"
             />
-            
+
             <motion.div
               initial={{ opacity: 0, scale: 0.95, y: -20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -106,7 +106,7 @@ export default function CommandMenu() {
                     <span className="ml-auto text-[10px] text-foreground/20 opacity-0 group-hover:opacity-100">Jump to Section</span>
                   </button>
                 ))}
-                
+
                 {filteredActions.length === 0 && (
                   <div className="p-8 text-center text-foreground/40 text-sm">
                     No results found for "{query}"
