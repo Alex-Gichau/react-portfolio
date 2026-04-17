@@ -6,6 +6,8 @@ import { Mail, MessageSquare, Send, Sparkles, ArrowRight } from "lucide-react";
 import { PERSONAL_INFO } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
+const FORMSPREE_ID = "xpzeojov"; // You can replace this with your own ID from formspree.io
+
 export default function Contact() {
   const [status, setStatus] = React.useState<"idle" | "loading" | "success" | "error">("idle");
 
@@ -14,14 +16,10 @@ export default function Contact() {
     setStatus("loading");
 
     const formData = new FormData(e.currentTarget);
-    const data = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      message: formData.get("message"),
-    };
+    const data = Object.fromEntries(formData);
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
