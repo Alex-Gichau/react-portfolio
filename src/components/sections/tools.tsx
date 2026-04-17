@@ -49,7 +49,7 @@ export default function Tools() {
          <h2 className="text-4xl md:text-6xl font-black text-center mb-4 section-title">My Toolkit</h2>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 md:gap-4">
         {TOOLS.map((tool, i) => (
           <motion.div
             key={tool.name}
@@ -58,16 +58,16 @@ export default function Tools() {
             viewport={{ once: true }}
             transition={{ delay: i * 0.05 }}
             whileHover={{ y: -5, scale: 1.02 }}
-            className="glass flex flex-col items-center justify-center p-8 rounded-[2rem] border-white/5 group hover:border-accent/20 transition-all cursor-default"
+            className="glass flex flex-col items-center justify-center p-4 md:p-8 rounded-[2rem] border-white/5 group hover:border-accent/20 transition-all cursor-default"
           >
-            <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+            <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white/5 flex items-center justify-center mb-3 md:mb-4 group-hover:bg-accent/20 transition-colors">
               <img 
                 src={`https://cdn.simpleicons.org/${tool.slug}/ffffff`} 
                 alt={tool.name}
-                className="w-6 h-6 object-contain opacity-60 group-hover:opacity-100 transition-opacity"
+                className="w-5 h-5 md:w-6 md:h-6 object-contain opacity-60 group-hover:opacity-100 transition-opacity"
               />
             </div>
-            <span className="text-[10px] font-black uppercase tracking-widest text-foreground/40 group-hover:text-foreground transition-colors">
+            <span className="text-[8px] md:text-[10px] font-black uppercase tracking-widest text-foreground/40 group-hover:text-foreground transition-colors text-center">
               {tool.name}
             </span>
           </motion.div>
