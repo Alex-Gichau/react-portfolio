@@ -9,16 +9,16 @@ export default function Experience() {
   return (
     <section id="experience" className="py-24 px-6 md:px-12 max-w-5xl mx-auto">
       <div className="flex flex-col items-center mb-20">
-         <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20 mb-4"
-         >
-            <Briefcase size={14} className="text-accent" />
-            <span className="text-xs font-bold uppercase tracking-wider text-accent">Journey</span>
-         </motion.div>
-         <h2 className="text-4xl md:text-6xl font-black text-center mb-4 section-title">Professional Path</h2>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20 mb-4"
+        >
+          <Briefcase size={14} className="text-accent" />
+          <span className="text-xs font-bold uppercase tracking-wider text-accent">Journey</span>
+        </motion.div>
+        <h2 className="text-4xl md:text-6xl font-black text-center mb-4 section-title">Professional Path</h2>
       </div>
 
       <div className="relative border-l border-white/5 ml-4 md:ml-0 md:left-1/2">
@@ -29,18 +29,17 @@ export default function Experience() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className={`relative mb-16 md:w-1/2 ${
-              i % 2 === 0 ? "md:pr-12 md:text-right md:ml-0" : "md:pl-12 md:ml-auto"
-            }`}
+            className={`relative mb-16 md:w-1/2 ${i % 2 === 0 ? "md:pr-12 md:text-right md:ml-0" : "md:pl-12 md:ml-auto"
+              }`}
           >
             {/* Timeline Dot */}
-            <div className="absolute top-0 left-[-5px] md:left-auto md:right-[-9px] w-4 h-4 rounded-full bg-accent border-4 border-background z-10 hidden md:block" style={{ 
-               left: i % 2 === 0 ? "auto" : "-9px",
-               right: i % 2 === 0 ? "-9px" : "auto"
+            <div className="absolute top-0 left-[-5px] md:left-auto md:right-[-9px] w-4 h-4 rounded-full bg-accent border-4 border-background z-10 hidden md:block" style={{
+              left: i % 2 === 0 ? "auto" : "-9px",
+              right: i % 2 === 0 ? "-9px" : "auto"
             }} />
-            
+
             <div className="md:hidden absolute top-0 left-[-21px] w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
-               <Briefcase size={16} className="text-accent" />
+              <Briefcase size={16} className="text-accent" />
             </div>
 
             <div className="glass p-8 rounded-[2rem] border-white/5 hover:border-accent/20 transition-all group">
@@ -48,7 +47,7 @@ export default function Experience() {
                 <Calendar size={14} />
                 {item.period}
               </div>
-              <h3 className="text-2xl font-black mb-1 group-hover:text-accent transition-colors">{item.title}</h3>
+              <a href={item.link}><h3 className="text-2xl font-black mb-1 group-hover:text-accent transition-colors">{item.title}</h3></a>
               <div className="text-lg font-bold text-foreground/60 mb-4">{item.company}</div>
               <p className="text-foreground/40 leading-relaxed text-sm">
                 {item.desc}
@@ -56,7 +55,7 @@ export default function Experience() {
             </div>
           </motion.div>
         ))}
-        
+
         {/* Mobile vertical line fix */}
         <div className="md:hidden absolute top-0 bottom-0 left-[-16.5px] w-[1px] bg-white/5" />
       </div>
