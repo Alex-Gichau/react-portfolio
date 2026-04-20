@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Alex M. Gichau — Developer, Designer & Sound Engineer",
+  title: "Alex M. Gichau | Portfolio",
   description:
     "Portfolio of Alex M. Gichau — Software Engineer, Graphic Designer, and Sound Engineer crafting digital experiences that move people.",
   keywords: [
@@ -30,6 +30,16 @@ export const metadata: Metadata = {
     "Sound Engineer",
     "Portfolio",
     "Web Developer",
+    "AI Agent",
+    "Virtual Assistant",
+    "React",
+    "NextJS",
+    "TailwindCSS",
+    "Framer Motion",
+    "Shadcn UI",
+    "Figma",
+    "Adobe Creative Suite",
+    "Ableton Live",
   ],
   authors: [{ name: "Alex M. Gichau" }],
   openGraph: {
