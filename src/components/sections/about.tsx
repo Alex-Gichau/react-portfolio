@@ -83,7 +83,7 @@ export default function About() {
            <div className="flex flex-col items-center gap-3">
               <div className="w-4 h-4 rounded-full bg-green-500 animate-pulse glow-cyan" />
               <span className="text-lg font-black uppercase tracking-tighter leading-none italic">
-                Open to new roles
+                Open to Connect
               </span>
            </div>
         </BentoCard>
@@ -99,7 +99,7 @@ export default function About() {
            <div className="flex flex-col h-full justify-between italic">
               <span className="text-4xl font-serif">"</span>
               <p className="text-lg font-medium leading-snug">
-                Moving digital boundaries through engineering and art.
+                Moving digital boundaries through code, design and sound.
               </p>
            </div>
         </BentoCard>

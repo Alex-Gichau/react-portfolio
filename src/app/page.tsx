@@ -206,8 +206,8 @@ export default function Home() {
       <footer className="py-12 px-6 border-t border-border/50 relative z-10 bg-background/50">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex flex-col gap-2">
-            <span className="font-bold text-xl">Geeshau<span className="text-accent">.</span></span>
-            <p className="text-sm text-foreground/40">© 2026 Alex M. Gichau. All rights reserved.</p>
+            <span className="font-bold text-xl">geeshau<span className="text-accent">.</span></span>
+            <p className="text-sm text-foreground/40">© Alex M. Gichau. All rights reserved.</p>
           </div>
           <div className="flex items-center gap-6">
             <Link href="#" className="p-3 glass rounded-full hover:scale-110 transition-transform"><X size={18} /></Link>
