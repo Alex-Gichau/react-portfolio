@@ -57,6 +57,22 @@ export default function Navbar() {
                 </Link>
               </Magnetic>
             ))}
+            
+            <Magnetic>
+              <a 
+                href={LINKS.whatsapp} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="ml-2 p-2 rounded-full glass hover:bg-green-500/20 hover:border-green-500/40 transition-all group"
+              >
+                <img 
+                  src="https://cdn.simpleicons.org/whatsapp/25D366" 
+                  alt="WhatsApp" 
+                  className="w-4 h-4"
+                />
+              </a>
+            </Magnetic>
+
             <ResumeButton 
               variant="primary" 
               showIcon={false}
@@ -69,6 +85,23 @@ export default function Navbar() {
       {/* Mobile Navbar (Bottom Center) */}
       <nav className="fixed bottom-8 left-1/2 -translate-x-1/2 z-[100] w-[calc(100%-3rem)] md:hidden">
         <div className="glass rounded-[2rem] px-4 py-3 flex items-center justify-around border-white/10 shadow-2xl backdrop-blur-2xl relative">
+          {/* Add WhatsApp to Mobile */}
+          <a 
+            href={LINKS.whatsapp} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex flex-col items-center gap-1 p-2 group"
+          >
+            <img 
+              src="https://cdn.simpleicons.org/whatsapp/25D366" 
+              alt="WhatsApp" 
+              className="w-5 h-5 opacity-40 group-hover:opacity-100 transition-opacity"
+            />
+            <span className="text-[8px] font-black uppercase tracking-tighter text-foreground/20 group-hover:text-foreground">
+              WhatsApp
+            </span>
+          </a>
+
           {NAV_ITEMS.map((item, i) => {
             const isHome = item.name === "Home";
             

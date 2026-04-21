@@ -16,6 +16,7 @@ export const LINKS = {
   playbook: "https://www.playbook.com/geeshauposters",
   instagram: "https://www.instagram.com/geeshauart/",
   pinterest: "https://www.pinterest.com/geeshau_art/_created",
+  whatsapp: "https://wa.me/254799748635",
 };
 
 export const SKILLS = [
