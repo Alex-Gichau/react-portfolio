@@ -11,7 +11,7 @@ export const LINKS = {
   github: "https://github.com/Alex-Gichau",
   linkedin: "https://www.linkedin.com/in/alex-gichau",
   twitter: "#",
-  resume: "https://drive.google.com/file/d/1UpwEGv9SPbt8M-kD8Sqng7WaI9LdunAW/view?usp=sharing",
+  resume: "https://docs.google.com/document/d/e/2PACX-1vSfY02ANsGmvDZwE0KQmCghUgfc9mt5LBSil1eonMXk4FX7KSZggUI-rVoh9FfCh1vX9MJboG_1s5yU/pub?embedded=true",
   behance: "https://www.behance.net/geeshauart",
   playbook: "https://www.playbook.com/geeshauposters",
   instagram: "https://www.instagram.com/geeshauart/",
@@ -105,6 +105,14 @@ export const PROJECTS = [
     link: "https://alex-gichau.github.io/geeshau-gallery/",
     github: "https://github.com/Alex-Gichau/geeshau-gallery",
     image: "https://i.ytimg.com/vi/bwHKm3PoUtA/hqdefault.jpg",
+  },
+  {
+    title: "Days2Wed | Wedding Countdown & RSVP",
+    desc: "Invitation to my wedding and a countdown to the big day.",
+    tech: ["NextJS", "ShadCN"],
+    link: "https://alex-gichau.github.io/gloria-peter/",
+    github: "https://github.com/Alex-Gichau/gloria-peter",
+    image: "https://i.ytimg.com/vi/pFD3jTD4XQU/hqdefault.jpg",
   },
   {
     title: "Automated Shift Manager",

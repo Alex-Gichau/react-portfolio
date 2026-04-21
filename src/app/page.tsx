@@ -23,6 +23,7 @@ import ExperienceTimeline from "@/components/sections/experience";
 import Projects from "@/components/sections/projects";
 import Contact from "@/components/sections/contact";
 import Magnetic from "@/components/magnetic";
+import ResumeButton from "@/components/resume-button";
 
 export default function Home() {
   return (
@@ -97,6 +98,9 @@ export default function Home() {
             >
               View Work <ArrowRight className="group-hover:translate-x-1 transition-transform" />
             </Link>
+            
+            <ResumeButton variant="glass" className="w-full sm:w-auto" />
+
             <Link 
               href="#contact" 
               className="w-full sm:w-auto px-8 py-4 glass hover:bg-white/10 font-bold rounded-2xl transition-all flex items-center justify-center gap-2"

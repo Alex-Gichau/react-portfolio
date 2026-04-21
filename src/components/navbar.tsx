@@ -7,6 +7,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { LINKS } from "@/lib/data";
 import Magnetic from "@/components/magnetic";
+import ResumeButton from "@/components/resume-button";
 
 const NAV_ITEMS = [
   { name: "About", href: "#about", icon: User },
@@ -56,14 +57,11 @@ export default function Navbar() {
                 </Link>
               </Magnetic>
             ))}
-            <Magnetic>
-              <Link 
-                href={LINKS.resume} 
-                className="ml-2 bg-accent hover:bg-accent/90 text-white px-5 py-2 rounded-full text-[10px] font-black uppercase tracking-widest transition-all shadow-lg shadow-accent/20 flex items-center gap-2 active:scale-95"
-              >
-                Resume <Download size={12} />
-              </Link>
-            </Magnetic>
+            <ResumeButton 
+              variant="primary" 
+              showIcon={false}
+              className="ml-2 px-5 py-2 rounded-full text-[10px] font-black uppercase tracking-widest" 
+            />
           </div>
         </div>
       </nav>
