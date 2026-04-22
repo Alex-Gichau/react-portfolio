@@ -141,7 +141,7 @@ export const PROJECTS = [
   },
   {
     title: "MiTroKit | Tool for ISPs",
-    desc: "A repository of tools for Virtual Assistants, Creators and Designers.",
+    desc: "A tool for ISPs to manage networks on a more visual and organized system.",
     tech: ["NextJS", "Networking", "MikroTikOS"],
     link: "https://alex-gichau.github.io/mikroTik-SaaS-controller/",
     github: "https://github.com/Alex-Gichau/mikroTik-SaaS-controller",

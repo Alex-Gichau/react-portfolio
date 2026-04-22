@@ -9,8 +9,8 @@ export default function Skills() {
   const categories = Array.from(new Set(SKILLS.map(s => s.category)));
 
   return (
-    <section id="skills" className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
-      <div className="flex flex-col items-center mb-16">
+    <section id="skills" className="py-20 md:py-32 lg:py-40 px-6 md:px-12 lg:px-24 max-w-[90rem] mx-auto">
+      <div className="flex flex-col items-center mb-16 md:mb-24">
          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -23,7 +23,7 @@ export default function Skills() {
          <h2 className="text-4xl md:text-6xl font-black text-center mb-4 section-title">My Toolkit</h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-10">
         {categories.map((cat, i) => (
           <motion.div
             key={cat}
@@ -31,10 +31,10 @@ export default function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className="glass p-8 rounded-[2rem] border-white/5"
+            className="glass p-8 md:p-10 rounded-[2rem] border-white/5"
           >
-            <h3 className="text-xl font-black mb-6 uppercase tracking-tighter text-accent">{cat}</h3>
-            <div className="flex flex-wrap gap-3">
+            <h3 className="text-xl font-black mb-7 md:mb-8 uppercase tracking-tighter text-accent">{cat}</h3>
+            <div className="flex flex-wrap gap-3 md:gap-4">
               {SKILLS.filter(s => s.category === cat).map(skill => (
                 <div 
                   key={skill.name}

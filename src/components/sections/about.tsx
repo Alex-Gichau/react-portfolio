@@ -20,12 +20,12 @@ const BentoCard = ({
   <motion.div
     whileHover={{ y: -5 }}
     className={cn(
-      "glass p-6 rounded-[2.5rem] border-white/5 relative overflow-hidden group",
+      "glass p-8 md:p-10 rounded-[2.5rem] border-white/5 relative overflow-hidden group",
       className
     )}
   >
     {title && (
-      <div className="flex items-center gap-2 mb-4">
+      <div className="flex items-center gap-2 mb-5">
         {Icon && <Icon className="text-accent" size={18} />}
         <h3 className="text-sm font-bold uppercase tracking-widest text-foreground/40">{title}</h3>
       </div>
@@ -36,8 +36,8 @@ const BentoCard = ({
 
 export default function About() {
   return (
-    <section id="about" className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
-      <div className="flex flex-col items-center mb-16">
+    <section id="about" className="py-20 md:py-32 lg:py-40 px-6 md:px-12 lg:px-24 max-w-[90rem] mx-auto">
+      <div className="flex flex-col items-center mb-16 md:mb-24">
          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -50,7 +50,7 @@ export default function About() {
          <h2 className="text-4xl md:text-6xl font-black text-center mb-4 section-title">About Me</h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 auto-rows-[minmax(180px,auto)]">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 lg:gap-10 auto-rows-[minmax(200px,auto)]">
         
         {/* Bio Card */}
         <BentoCard className="md:col-span-8 md:row-span-2 flex flex-col justify-center" title="The Story" icon={User}>

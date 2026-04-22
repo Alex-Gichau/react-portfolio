@@ -2,10 +2,10 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { 
-  Code2, 
-  Palette, 
-  Music, 
+import {
+  Code2,
+  Palette,
+  Music,
   ArrowRight,
   Download,
   Mail,
@@ -39,14 +39,14 @@ export default function Home() {
 
 
       {/* Hero Section */}
-      <main className="relative z-10 pt-32 pb-20 md:pt-48 px-6 md:px-12 max-w-7xl mx-auto flex flex-col items-center">
-        
+      <main className="relative z-10 pt-36 pb-28 md:pt-56 md:pb-36 px-6 md:px-16 lg:px-24 max-w-[90rem] mx-auto flex flex-col items-center">
+
         <Magnetic>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex items-center gap-2 px-4 py-1.5 rounded-full glass mb-8 border-accent/20 cursor-default"
+            className="flex items-center gap-2 px-4 py-1.5 rounded-full glass mb-10 md:mb-12 border-accent/20 cursor-default"
           >
             <span className="pulse-dot" />
             <span className="text-xs font-semibold tracking-wide text-accent-foreground/80 lowercase">Available for new opportunities</span>
@@ -55,54 +55,54 @@ export default function Home() {
 
         {/* Main Content */}
         <div className="text-center max-w-4xl mx-auto">
-          <motion.h5 
+          <motion.h5
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-accent font-mono text-sm tracking-[0.3em] uppercase mb-4"
+            className="text-accent font-mono text-sm tracking-[0.3em] uppercase mb-6"
           >
             Alex M. Gichau
           </motion.h5>
-          
-          <motion.h1 
+
+          <motion.h1
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-5xl md:text-8xl font-black tracking-tight mb-8 leading-[1.1]"
+            className="text-5xl md:text-8xl font-black tracking-tight mb-10 md:mb-14 leading-[1.1]"
           >
             Crafting <span className="gradient-text animate-shimmer">digital</span> <br />
             experiences that move.
           </motion.h1>
 
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="text-lg md:text-xl text-foreground/60 max-w-2xl mx-auto mb-12 leading-relaxed"
+            className="text-lg md:text-xl text-foreground/60 max-w-2xl mx-auto mb-14 md:mb-16 leading-relaxed"
           >
-            I am a professional <span className="text-foreground font-semibold">Software Engineer</span>, 
-            creative <span className="text-foreground font-semibold">Graphic Designer</span>, and expert 
-            <span className="text-foreground font-semibold"> Sound Engineer</span> building high-performance, visual, 
+            I am a professional <span className="text-foreground font-semibold">Software Engineer</span>,
+            creative <span className="text-foreground font-semibold">Graphic Designer</span>, and expert
+            <span className="text-foreground font-semibold"> Sound Engineer</span> building high-performance, visual,
             and auditory masterpieces.
           </motion.p>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
+            className="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-8"
           >
-            <Link 
-              href="#projects" 
+            <Link
+              href="#projects"
               className="w-full sm:w-auto px-8 py-4 bg-foreground text-background font-bold rounded-2xl hover:opacity-90 transition-all flex items-center justify-center gap-2 group shadow-xl"
             >
               View Work <ArrowRight className="group-hover:translate-x-1 transition-transform" />
             </Link>
-            
+
             <ResumeButton variant="glass" className="w-full sm:w-auto" />
 
-            <Link 
-              href="#contact" 
+            <Link
+              href="#contact"
               className="w-full sm:w-auto px-8 py-4 glass hover:bg-white/10 font-bold rounded-2xl transition-all flex items-center justify-center gap-2"
             >
               Let's Connect <Mail size={18} />
@@ -111,7 +111,7 @@ export default function Home() {
         </div>
 
         {/* Role Cards / Features */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-32 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 mt-36 md:mt-44 w-full">
           {[
             {
               title: "Engineering",
@@ -146,9 +146,9 @@ export default function Home() {
               )}
             >
               <div className="relative aspect-[16/9] w-full overflow-hidden">
-                <img 
-                  src={item.image} 
-                  alt={item.title} 
+                <img
+                  src={item.image}
+                  alt={item.title}
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-50"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
@@ -156,7 +156,7 @@ export default function Home() {
                   {item.icon}
                 </div>
               </div>
-              
+
               <div className="p-8 pt-4">
                 <h3 className="text-xl font-bold mb-3">{item.title}</h3>
                 <p className="text-foreground/50 text-sm leading-relaxed">
@@ -171,43 +171,33 @@ export default function Home() {
         </div>
 
         {/* Scroll Indicator */}
-        <motion.div 
+        <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-          className="mt-32 text-foreground/20"
+          className="mt-36 md:mt-44 text-foreground/20"
         >
           <ChevronDown size={32} strokeWidth={1} />
         </motion.div>
       </main>
 
-      <div className="py-20 md:py-32">
+      <div className="w-full space-y-16 md:space-y-24 lg:space-y-32">
         <About />
-      </div>
-      <div className="py-20 md:py-32">
         <Skills />
-      </div>
-      <div className="py-20 md:py-32">
         <Tools />
-      </div>
-      <div className="py-20 md:py-32">
         <ExperienceTimeline />
-      </div>
-      <div className="py-20 md:py-32">
         <Projects />
-      </div>
-      <div className="py-20 md:py-32">
         <Contact />
       </div>
 
       {/* Background Graphic Decoration */}
       <div className="absolute top-[10%] right-[5%] animate-rotate-slow opacity-[0.02] pointer-events-none hidden lg:block">
         <svg width="400" height="400" viewBox="0 0 400 400">
-           <circle cx="200" cy="200" r="180" stroke="currentColor" strokeWidth="1" fill="none" strokeDasharray="10 10" />
-           <rect x="100" y="100" width="200" height="200" stroke="currentColor" strokeWidth="1" fill="none" transform="rotate(45 200 200)" />
+          <circle cx="200" cy="200" r="180" stroke="currentColor" strokeWidth="1" fill="none" strokeDasharray="10 10" />
+          <rect x="100" y="100" width="200" height="200" stroke="currentColor" strokeWidth="1" fill="none" transform="rotate(45 200 200)" />
         </svg>
       </div>
 
-      <footer className="py-12 px-6 border-t border-border/50 relative z-10 bg-background/50">
+      <footer className="py-16 md:py-20 px-6 border-t border-border/50 relative z-10 bg-background/50 mt-16 md:mt-24">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex flex-col gap-2">
             <span className="font-bold text-xl">geeshau<span className="text-accent">.</span></span>

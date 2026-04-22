@@ -37,29 +37,29 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
-      <div className="glass rounded-[3rem] p-8 md:p-16 relative overflow-hidden">
+    <section id="contact" className="py-20 md:py-32 lg:py-40 px-6 md:px-12 lg:px-24 max-w-[90rem] mx-auto">
+      <div className="glass rounded-[3rem] p-8 md:p-16 lg:p-20 relative overflow-hidden">
         {/* Abstract Background Blur */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 blur-[100px] -z-10" />
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent-2/20 blur-[100px] -z-10" />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div>
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20 mb-6 w-fit"
+              className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20 mb-8 w-fit"
             >
               <MessageSquare size={14} className="text-accent" />
               <span className="text-xs font-bold uppercase tracking-wider text-accent">Get in touch</span>
             </motion.div>
             
-            <h2 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
+            <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight">
               Let's build something <span className="gradient-text italic">extraordinary</span>.
             </h2>
             
-            <p className="text-lg text-foreground/60 mb-8 max-w-md">
+            <p className="text-lg text-foreground/60 mb-10 max-w-md leading-relaxed">
               Whether you have a specific project in mind or just want to say hi, my inbox is always open.
             </p>
 
@@ -79,9 +79,9 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="glass bg-white/5 rounded-[2rem] p-8 border-white/5">
-            <form onSubmit={handleSubmit} className="space-y-6">
-               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="glass bg-white/5 rounded-[2rem] p-8 md:p-10 border-white/5">
+            <form onSubmit={handleSubmit} className="space-y-7 md:space-y-8">
+               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                   <div className="space-y-2">
                      <label className="text-xs font-black uppercase tracking-widest text-foreground/40 ml-1">Name</label>
                      <input required name="name" type="text" placeholder="John Doe" className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 focus:outline-none focus:border-accent/50 transition-colors" />

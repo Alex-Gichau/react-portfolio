@@ -7,8 +7,8 @@ import { EXPERIENCE } from "@/lib/data";
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-24 px-6 md:px-12 max-w-5xl mx-auto">
-      <div className="flex flex-col items-center mb-20">
+    <section id="experience" className="py-20 md:py-32 lg:py-40 px-6 md:px-12 lg:px-24 max-w-[90rem] mx-auto relative">
+      <div className="flex flex-col items-center mb-16 md:mb-24">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -29,7 +29,7 @@ export default function Experience() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className={`relative mb-16 md:w-1/2 ${i % 2 === 0 ? "md:pr-12 md:text-right md:ml-0" : "md:pl-12 md:ml-auto"
+            className={`relative mb-20 md:mb-24 md:w-1/2 ${i % 2 === 0 ? "md:pr-16 md:text-right md:ml-0" : "md:pl-16 md:ml-auto"
               }`}
           >
             {/* Timeline Dot */}
@@ -42,13 +42,13 @@ export default function Experience() {
               <Briefcase size={16} className="text-accent" />
             </div>
 
-            <div className="glass p-8 rounded-[2rem] border-white/5 hover:border-accent/20 transition-all group">
-              <div className={`flex items-center gap-2 mb-4 text-accent font-bold text-xs uppercase tracking-widest ${i % 2 === 0 ? "md:justify-end" : ""}`}>
+            <div className="glass p-8 md:p-10 rounded-[2rem] border-white/5 hover:border-accent/20 transition-all group">
+              <div className={`flex items-center gap-2 mb-5 text-accent font-bold text-xs uppercase tracking-widest ${i % 2 === 0 ? "md:justify-end" : ""}`}>
                 <Calendar size={14} />
                 {item.period}
               </div>
               <a href={item.link}><h3 className="text-2xl font-black mb-1 group-hover:text-accent transition-colors">{item.title}</h3></a>
-              <div className="text-lg font-bold text-foreground/60 mb-4">{item.company}</div>
+              <div className="text-lg font-bold text-foreground/60 mb-5">{item.company}</div>
               <p className="text-foreground/40 leading-relaxed text-sm">
                 {item.desc}
               </p>
