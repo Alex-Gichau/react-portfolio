@@ -37,7 +37,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-32 lg:py-40 px-6 md:px-12 lg:px-24 max-w-[90rem] mx-auto">
+    <section id="contact" className="py-8 md:py-12 lg:py-16 px-6 md:px-12 lg:px-24 max-w-[90rem] mx-auto">
       <div className="glass rounded-[3rem] p-8 md:p-16 lg:p-20 relative overflow-hidden">
         {/* Abstract Background Blur */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 blur-[100px] -z-10" />

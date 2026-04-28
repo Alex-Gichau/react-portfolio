@@ -9,7 +9,7 @@ export default function Skills() {
   const categories = Array.from(new Set(SKILLS.map(s => s.category)));
 
   return (
-    <section id="skills" className="py-20 md:py-32 lg:py-40 px-6 md:px-12 lg:px-24 max-w-[90rem] mx-auto">
+    <section id="skills" className="py-8 md:py-12 lg:py-16 px-6 md:px-12 lg:px-24 max-w-[90rem] mx-auto">
       <div className="flex flex-col items-center mb-16 md:mb-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

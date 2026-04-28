@@ -38,7 +38,7 @@ export default function Navbar() {
           scrolled ? "bg-background/40 backdrop-blur-3xl py-3" : "bg-transparent"
         )}>
           <Link href="#home" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center text-white font-black text-xs">
+            <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center text-background font-black text-xs">
               AG
             </div>
             <span className="font-black text-sm tracking-tighter group-hover:text-accent transition-all">
@@ -110,7 +110,7 @@ export default function Navbar() {
                 <div key={item.href} className="relative -top-8">
                   <Link
                     href={item.href}
-                    className="w-16 h-16 rounded-full bg-accent flex items-center justify-center text-white shadow-2xl shadow-accent/40 border-4 border-background"
+                    className="w-16 h-16 rounded-full bg-accent flex items-center justify-center text-background shadow-2xl shadow-accent/40 border-4 border-background"
                   >
                     <Home size={24} />
                   </Link>

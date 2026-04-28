@@ -54,7 +54,21 @@ export default function Home() {
         </Magnetic>
 
         {/* Main Content */}
-        <div className="text-center max-w-4xl mx-auto">
+        <div className="text-center max-w-4xl mx-auto flex flex-col items-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="mb-8 relative w-32 h-32 md:w-40 md:h-40 rounded-full p-1 bg-accent"
+          >
+            <div className="w-full h-full rounded-full overflow-hidden border-4 border-background bg-muted">
+              <img src="/profile.jpg" alt="Alex Gichau" className="w-full h-full object-cover" />
+            </div>
+            <div className="absolute -bottom-2 -right-2 bg-background rounded-full p-1.5">
+              <div className="bg-green-500 w-4 h-4 rounded-full border-2 border-background animate-pulse glow-cyan" />
+            </div>
+          </motion.div>
+
           <motion.h5
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -180,7 +194,7 @@ export default function Home() {
         </motion.div>
       </main>
 
-      <div className="w-full space-y-16 md:space-y-24 lg:space-y-32">
+      <div className="w-full space-y-4 md:space-y-8 lg:space-y-12">
         <About />
         <Skills />
         <Tools />

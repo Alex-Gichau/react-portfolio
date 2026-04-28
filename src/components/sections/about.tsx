@@ -36,7 +36,7 @@ const BentoCard = ({
 
 export default function About() {
   return (
-    <section id="about" className="py-20 md:py-32 lg:py-40 px-6 md:px-12 lg:px-24 max-w-[90rem] mx-auto">
+    <section id="about" className="py-8 md:py-12 lg:py-16 px-6 md:px-12 lg:px-24 max-w-[90rem] mx-auto">
       <div className="flex flex-col items-center mb-16 md:mb-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -54,9 +54,15 @@ export default function About() {
 
         {/* Bio Card */}
         <BentoCard className="md:col-span-8 md:row-span-2 flex flex-col justify-center" title="The Story" icon={User}>
-          <p className="text-xl md:text-2xl font-medium leading-relaxed text-foreground/80">
-            {PERSONAL_INFO.bio}
-          </p>
+          <div className="flex flex-col md:flex-row gap-8 md:gap-10 items-center md:items-start pt-2">
+            <div className="w-48 h-48 md:w-56 md:h-56 shrink-0 rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative group">
+              <img src="/profile.jpg" alt="Alex Gichau" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent pointer-events-none" />
+            </div>
+            <p className="text-xl md:text-2xl font-medium leading-relaxed text-foreground/80 flex-1">
+              {PERSONAL_INFO.bio}
+            </p>
+          </div>
         </BentoCard>
 
         {/* Location Card */}
@@ -95,7 +101,7 @@ export default function About() {
         </BentoCard>
 
         {/* Random Quote/Motto Card */}
-        <BentoCard className="md:col-span-4 bg-gradient-to-br from-accent-2/10 to-accent/10 border-accent-2/20">
+        <BentoCard className="md:col-span-4 bg-muted border-white/5">
           <div className="flex flex-col h-full justify-between italic">
             <span className="text-4xl font-serif">"</span>
             <p className="text-lg font-medium leading-snug">

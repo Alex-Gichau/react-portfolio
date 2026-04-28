@@ -16,7 +16,7 @@ export default function ResumeButton({ className, variant = "glass", showIcon = 
   const [isOpen, setIsOpen] = useState(false);
 
   const variants = {
-    primary: "bg-accent hover:bg-accent/90 text-white shadow-lg shadow-accent/20",
+    primary: "bg-accent hover:bg-accent/90 text-background font-bold shadow-lg shadow-accent/20",
     secondary: "bg-foreground text-background font-bold hover:opacity-90 shadow-xl",
     glass: "glass hover:bg-white/10 font-bold",
   };

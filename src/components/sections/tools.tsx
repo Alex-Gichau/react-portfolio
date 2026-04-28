@@ -35,7 +35,7 @@ const TOOLS = [
 
 export default function Tools() {
   return (
-    <section id="tools" className="py-20 md:py-32 lg:py-40 px-6 md:px-12 lg:px-24 max-w-[90rem] mx-auto overflow-hidden">
+    <section id="tools" className="py-8 md:py-12 lg:py-16 px-6 md:px-12 lg:px-24 max-w-[90rem] mx-auto overflow-hidden">
       <div className="flex flex-col items-center mb-16 md:mb-24">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -49,7 +49,7 @@ export default function Tools() {
         <h2 className="text-4xl md:text-6xl font-black text-center mb-4 section-title">My Toolkit</h2>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6">
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2 md:gap-3">
         {TOOLS.map((tool, i) => (
           <motion.div
             key={tool.name}
@@ -58,9 +58,9 @@ export default function Tools() {
             viewport={{ once: true }}
             transition={{ delay: i * 0.05 }}
             whileHover={{ y: -5, scale: 1.02 }}
-            className="glass flex flex-col items-center justify-center p-5 md:p-10 rounded-[2rem] border-white/5 group hover:border-accent/20 transition-all cursor-default"
+            className="glass flex flex-col items-center justify-center p-4 rounded-2xl border-white/5 group hover:border-accent/20 transition-all cursor-default"
           >
-            <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl bg-white/5 flex items-center justify-center mb-4 md:mb-5 group-hover:bg-accent/20 transition-colors">
+            <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-white/5 flex items-center justify-center mb-3 group-hover:bg-accent/20 transition-colors">
               <img
                 src={`https://cdn.simpleicons.org/${tool.slug}/ffffff`}
                 alt={tool.name}
