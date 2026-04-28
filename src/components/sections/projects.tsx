@@ -22,7 +22,7 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
     >
       {/* Project Image/Video Container */}
       <Tilt className="perspective-1000">
-        <div className="relative aspect-video rounded-[2.5rem] overflow-hidden bg-muted border border-white/5 shadow-2xl group-hover:border-accent/30 transition-all duration-500" style={{ transform: "translateZ(50px)" }}>
+        <div className="relative aspect-[2/1] rounded-[2.5rem] overflow-hidden bg-muted border border-white/5 shadow-2xl group-hover:border-accent/30 transition-all duration-500" style={{ transform: "translateZ(50px)" }}>
 
           {loading && <Skeleton className="absolute inset-0 w-full h-full rounded-none" />}
 
@@ -84,6 +84,13 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
 }
 
 export default function Projects() {
+  const [activeCategory, setActiveCategory] = useState("All");
+  const categories = ["All", "Code", "Design", "Sound"];
+
+  const filteredProjects = activeCategory === "All"
+    ? PROJECTS
+    : PROJECTS.filter(p => p.category === activeCategory);
+
   return (
     <section id="projects" className="py-8 md:py-12 lg:py-16 px-6 md:px-12 lg:px-24 max-w-[90rem] mx-auto">
       <div className="flex flex-col items-center mb-16 md:mb-24">
@@ -97,16 +104,38 @@ export default function Projects() {
           <span className="text-xs font-bold uppercase tracking-wider text-accent-2">My Showcase</span>
         </motion.div>
         <h2 className="text-4xl md:text-6xl font-black text-center mb-4 section-title">Featured Work</h2>
-        <p className="text-foreground/40 max-w-xl text-center mt-4">
-          A selection of my best work across software engineering and media production.
+        
+        {/* Category Tabs */}
+        <div className="flex flex-wrap justify-center gap-2 md:gap-4 mt-8 md:mt-12">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className={cn(
+                "px-6 py-2.5 rounded-full text-[10px] md:text-xs font-black uppercase tracking-widest transition-all duration-300",
+                activeCategory === cat
+                  ? "bg-accent text-white shadow-xl shadow-accent/20"
+                  : "bg-white/5 text-foreground/40 hover:bg-white/10 hover:text-foreground"
+              )}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
+        <p className="text-foreground/40 max-w-xl text-center mt-10 md:mt-12">
+          A selection of my best work in <span className="text-foreground font-semibold lowercase">{activeCategory === "All" ? "various fields" : activeCategory}</span>.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 lg:gap-14">
-        {PROJECTS.map((project, i) => (
+      <motion.div 
+        layout
+        className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10"
+      >
+        {filteredProjects.map((project, i) => (
           <ProjectCard key={project.title} project={project} index={i} />
         ))}
-      </div>
+      </motion.div>
 
       <div className="mt-24 md:mt-28 flex justify-center">
         <Link href={PROJECTS[0].github} className="glass px-10 py-5 rounded-3xl font-bold flex items-center gap-3 hover:bg-white/10 hover:scale-105 transition-all active:scale-95 group">

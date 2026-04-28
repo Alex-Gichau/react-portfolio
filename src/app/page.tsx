@@ -39,7 +39,7 @@ export default function Home() {
 
 
       {/* Hero Section */}
-      <main className="relative z-10 pt-36 pb-28 md:pt-56 md:pb-36 px-6 md:px-16 lg:px-24 max-w-[90rem] mx-auto flex flex-col items-center">
+      <main className="relative z-10 pt-20 pb-28 md:pt-32 md:pb-36 px-6 md:px-16 lg:px-24 max-w-[90rem] mx-auto flex flex-col items-center">
 
         <Magnetic>
           <motion.div
@@ -54,73 +54,68 @@ export default function Home() {
         </Magnetic>
 
         {/* Main Content */}
-        <div className="text-center max-w-4xl mx-auto flex flex-col items-center">
+        {/* Main Content */}
+        <div className="w-full flex flex-col md:flex-row items-center justify-between gap-12 md:gap-16 lg:gap-24">
+          <div className="flex-1 text-center md:text-left order-2 md:order-1">
+            <motion.h5
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="text-accent font-mono text-sm tracking-[0.3em] uppercase mb-6"
+            >
+              Alex M. Gichau
+            </motion.h5>
+
+            <motion.h1
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              className="text-4xl md:text-6xl lg:text-8xl font-black tracking-tight mb-8 md:mb-10 leading-[1.1]"
+            >
+              Crafting <span className="gradient-text animate-shimmer">digital</span> <br />
+              experiences that move.
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              className="text-lg md:text-xl text-foreground/60 max-w-2xl mb-10 md:mb-12 leading-relaxed"
+            >
+              I am a professional <span className="text-foreground font-semibold">Software Engineer</span>,
+              creative <span className="text-foreground font-semibold">Graphic Designer</span>, and expert
+              <span className="text-foreground font-semibold"> Sound Engineer</span>.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.7 }}
+              className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 sm:gap-6"
+            >
+              <Link
+                href="#projects"
+                className="w-full sm:w-auto px-8 py-4 bg-foreground text-background font-bold rounded-2xl hover:opacity-90 transition-all flex items-center justify-center gap-2 group shadow-xl"
+              >
+                View Work <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+              </Link>
+
+              <ResumeButton variant="glass" className="w-full sm:w-auto" />
+            </motion.div>
+          </div>
+
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="mb-8 relative w-32 h-32 md:w-40 md:h-40 rounded-full p-1 bg-accent"
+            className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-[400px] lg:h-[400px] rounded-full p-1 bg-accent order-1 md:order-2 flex-shrink-0 mb-8 md:mb-0"
           >
             <div className="w-full h-full rounded-full overflow-hidden border-4 border-background bg-muted">
               <img src="/profile.jpg" alt="Alex Gichau" className="w-full h-full object-cover" />
             </div>
             <div className="absolute -bottom-2 -right-2 bg-background rounded-full p-1.5">
-              <div className="bg-green-500 w-4 h-4 rounded-full border-2 border-background animate-pulse glow-cyan" />
+              <div className="bg-green-500 w-4 h-4 sm:w-6 sm:h-6 rounded-full border-2 border-background animate-pulse glow-cyan" />
             </div>
-          </motion.div>
-
-          <motion.h5
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="text-accent font-mono text-sm tracking-[0.3em] uppercase mb-6"
-          >
-            Alex M. Gichau
-          </motion.h5>
-
-          <motion.h1
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-5xl md:text-8xl font-black tracking-tight mb-10 md:mb-14 leading-[1.1]"
-          >
-            Crafting <span className="gradient-text animate-shimmer">digital</span> <br />
-            experiences that move.
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="text-lg md:text-xl text-foreground/60 max-w-2xl mx-auto mb-14 md:mb-16 leading-relaxed"
-          >
-            I am a professional <span className="text-foreground font-semibold">Software Engineer</span>,
-            creative <span className="text-foreground font-semibold">Graphic Designer</span>, and expert
-            <span className="text-foreground font-semibold"> Sound Engineer</span> building high-performance, visual,
-            and auditory masterpieces.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.7 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-8"
-          >
-            <Link
-              href="#projects"
-              className="w-full sm:w-auto px-8 py-4 bg-foreground text-background font-bold rounded-2xl hover:opacity-90 transition-all flex items-center justify-center gap-2 group shadow-xl"
-            >
-              View Work <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-            </Link>
-
-            <ResumeButton variant="glass" className="w-full sm:w-auto" />
-
-            <Link
-              href="#contact"
-              className="w-full sm:w-auto px-8 py-4 glass hover:bg-white/10 font-bold rounded-2xl transition-all flex items-center justify-center gap-2"
-            >
-              Let's Connect <Mail size={18} />
-            </Link>
           </motion.div>
         </div>
 
@@ -128,25 +123,28 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 mt-36 md:mt-44 w-full">
           {[
             {
-              title: "Engineering",
+              title: "Code",
               desc: "Building scalable web & mobile apps with modern frameworks and pixel-perfect UI.",
               icon: <Code2 className="text-accent" size={32} />,
               color: "glow-purple",
-              image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000"
+              image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000",
+              link: "https://github.com/Alex-Gichau"
             },
             {
               title: "Design",
               desc: "Crafting visual identities, brand stories, and stunning 2D/3D graphics.",
               icon: <Palette className="text-accent-2" size={32} />,
               color: "glow-cyan",
-              image: "https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=1000"
+              image: "https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=1000",
+              link: "https://www.behance.net/geeshauart"
             },
             {
               title: "Sound",
               desc: "Professional audio production, mixing, and immersive sound engineering.",
               icon: <Music className="text-accent-3" size={32} />,
               color: "glow-amber",
-              image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=1000"
+              image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=1000",
+              link: "https://www.youtube.com/@pceastandrewsnairobi"
             }
           ].map((item, i) => (
             <motion.div
@@ -173,9 +171,16 @@ export default function Home() {
 
               <div className="p-8 pt-4">
                 <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                <p className="text-foreground/50 text-sm leading-relaxed">
+                <p className="text-foreground/50 text-sm leading-relaxed mb-6">
                   {item.desc}
                 </p>
+                <Link 
+                  href={item.link}
+                  target="_blank"
+                  className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-accent hover:text-accent-foreground transition-colors group/link"
+                >
+                  See Work <ArrowRight size={14} className="group-hover/link:translate-x-1 transition-transform" />
+                </Link>
                 <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
                   <ArrowRight size={18} className="-rotate-45" />
                 </div>
@@ -194,7 +199,7 @@ export default function Home() {
         </motion.div>
       </main>
 
-      <div className="w-full space-y-4 md:space-y-8 lg:space-y-12">
+      <div className="w-full space-y-2 md:space-y-4 lg:space-y-6">
         <About />
         <Skills />
         <Tools />
@@ -213,17 +218,40 @@ export default function Home() {
 
       <footer className="py-16 md:py-20 px-6 border-t border-border/50 relative z-10 bg-background/50 mt-16 md:mt-24">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 items-center md:items-start text-center md:text-left">
             <span className="font-bold text-xl">geeshau<span className="text-accent">.</span></span>
             <p className="text-sm text-foreground/40">© Alex M. Gichau. All rights reserved.</p>
           </div>
-          <div className="flex items-center gap-6">
-            <Link href="#" className="p-3 glass rounded-full hover:scale-110 transition-transform"><X size={18} /></Link>
-            <Link href="#" className="p-3 glass rounded-full hover:scale-110 transition-transform"><LinkIcon size={18} /></Link>
-            <Link href="https://github.com/Alex-Gichau" className="p-3 glass rounded-full hover:scale-110 transition-transform"><Globe size={18} /></Link>
+          <div className="flex flex-wrap justify-center items-center gap-4">
+            <Link href="https://github.com/Alex-Gichau" target="_blank" className="p-3 glass rounded-full hover:scale-110 hover:text-accent transition-all flex items-center gap-2 group">
+              <img src="https://cdn.simpleicons.org/github/ffffff" className="w-5 h-5 opacity-50 group-hover:opacity-100" alt="GitHub" />
+              <span className="text-[10px] font-black uppercase tracking-widest hidden sm:inline">GitHub</span>
+            </Link>
+            <Link href="https://www.linkedin.com/in/alex-gichau" target="_blank" className="p-3 glass rounded-full hover:scale-110 hover:text-accent transition-all flex items-center gap-2 group">
+              <img src="https://cdn.simpleicons.org/linkedin/ffffff" className="w-5 h-5 opacity-50 group-hover:opacity-100" alt="LinkedIn" />
+              <span className="text-[10px] font-black uppercase tracking-widest hidden sm:inline">LinkedIn</span>
+            </Link>
+            <Link href="https://www.behance.net/geeshauart" target="_blank" className="p-3 glass rounded-full hover:scale-110 hover:text-accent transition-all flex items-center gap-2 group">
+              <img src="https://cdn.simpleicons.org/behance/ffffff" className="w-5 h-5 opacity-50 group-hover:opacity-100" alt="Behance" />
+              <span className="text-[10px] font-black uppercase tracking-widest hidden sm:inline">Behance</span>
+            </Link>
+            <Link href="https://www.instagram.com/geeshauart/" target="_blank" className="p-3 glass rounded-full hover:scale-110 hover:text-accent transition-all flex items-center gap-2 group">
+              <img src="https://cdn.simpleicons.org/instagram/ffffff" className="w-5 h-5 opacity-50 group-hover:opacity-100" alt="Instagram" />
+              <span className="text-[10px] font-black uppercase tracking-widest hidden sm:inline">Instagram</span>
+            </Link>
           </div>
         </div>
       </footer>
+
+      {/* Floating Scroll to Top Button (Mobile Only) */}
+      <motion.button
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="fixed bottom-32 right-6 z-[90] w-12 h-12 rounded-full glass border-white/10 flex items-center justify-center text-accent shadow-2xl md:hidden"
+      >
+        <ChevronDown size={24} className="rotate-180" />
+      </motion.button>
     </div>
   );
 }

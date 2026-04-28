@@ -35,7 +35,7 @@ export default function Navbar() {
       )}>
         <div className={cn(
           "glass rounded-full px-6 h-16 flex items-center justify-between flex-wrap gap-2 border-white/5 shadow-2xl transition-all duration-500",
-          scrolled ? "bg-background/40 backdrop-blur-3xl py-3" : "bg-transparent"
+          scrolled ? "bg-background/40 backdrop-blur-[40px] py-3" : "bg-transparent"
         )}>
           <Link href="#home" className="flex items-center gap-2 group">
             <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center text-background font-black text-xs">
@@ -85,52 +85,47 @@ export default function Navbar() {
       {/* Mobile Navbar (Bottom Center) */}
       <nav className="fixed bottom-8 left-1/2 -translate-x-1/2 z-[100] w-[calc(100%-3rem)] md:hidden">
         <div className="glass rounded-[2rem] px-4 py-3 flex items-center justify-around border-white/10 shadow-2xl backdrop-blur-2xl relative">
-          {/* Add WhatsApp to Mobile */}
-          <a
-            href={LINKS.whatsapp}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 p-2 group"
-          >
-            <img
-              src="https://cdn.simpleicons.org/whatsapp/25D366"
-              alt="WhatsApp"
-              className="w-5 h-5 opacity-40 group-hover:opacity-100 transition-opacity"
-            />
-            <span className="text-[8px] font-black uppercase tracking-tighter text-foreground/20 group-hover:text-foreground">
-              WhatsApp
-            </span>
-          </a>
+          {NAV_ITEMS.filter(item => item.name !== "Home").slice(0, 2).map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="flex flex-col items-center gap-1 p-2 group"
+            >
+              <item.icon size={20} className="text-foreground/40 group-active:text-accent group-hover:text-accent transition-colors" />
+              <span className="text-[8px] font-black uppercase tracking-tighter text-foreground/20 group-hover:text-foreground">
+                {item.name}
+              </span>
+            </Link>
+          ))}
 
-          {NAV_ITEMS.map((item, i) => {
-            const isHome = item.name === "Home";
+          {/* WhatsApp as Center Button for Mobile */}
+          <div className="relative -top-8">
+            <a
+              href={LINKS.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-16 h-16 rounded-full bg-black flex items-center justify-center text-white shadow-2xl shadow-white/10 border-4 border-white/20 hover:border-accent/40 transition-all"
+            >
+              <img
+                src="https://cdn.simpleicons.org/whatsapp/ffffff"
+                alt="WhatsApp"
+                className="w-8 h-8"
+              />
+            </a>
+          </div>
 
-            if (isHome) {
-              return (
-                <div key={item.href} className="relative -top-8">
-                  <Link
-                    href={item.href}
-                    className="w-16 h-16 rounded-full bg-accent flex items-center justify-center text-background shadow-2xl shadow-accent/40 border-4 border-background"
-                  >
-                    <Home size={24} />
-                  </Link>
-                </div>
-              );
-            }
-
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="flex flex-col items-center gap-1 p-2 group"
-              >
-                <item.icon size={20} className="text-foreground/40 group-active:text-accent group-hover:text-accent transition-colors" />
-                <span className="text-[8px] font-black uppercase tracking-tighter text-foreground/20 group-hover:text-foreground">
-                  {item.name}
-                </span>
-              </Link>
-            );
-          })}
+          {NAV_ITEMS.filter(item => item.name !== "Home").slice(2).map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="flex flex-col items-center gap-1 p-2 group"
+            >
+              <item.icon size={20} className="text-foreground/40 group-active:text-accent group-hover:text-accent transition-colors" />
+              <span className="text-[8px] font-black uppercase tracking-tighter text-foreground/20 group-hover:text-foreground">
+                {item.name}
+              </span>
+            </Link>
+          ))}
         </div>
       </nav>
     </>

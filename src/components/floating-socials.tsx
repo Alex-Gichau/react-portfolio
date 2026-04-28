@@ -14,7 +14,7 @@ const SOCIAL_CONFIG = [
 
 export default function FloatingSocials() {
   return (
-    <div className="fixed left-6 bottom-6 z-[40] flex flex-col gap-3">
+    <div className="fixed left-6 bottom-6 z-[40] hidden md:flex flex-col gap-3">
       {SOCIAL_CONFIG.map((social, i) => (
         <motion.a
           key={social.name}
