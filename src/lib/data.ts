@@ -74,7 +74,7 @@ export const EXPERIENCE = [
     link: "https://drive.google.com/file/d/1edsFIVfGa16lutwEnBhy2ydG1209dSOh/view",
   },
   {
-    title: "AV Technician (Volunteer)",
+    title: "AV Technician (Campus Job)",
     company: "PCEA Juja Township",
     period: "Feb 2018 – Dec 2024",
     desc: "Livestreaming, photography, visual projection and sound management.",
@@ -178,5 +178,54 @@ export const SERVICES = [
   {
     title: "Sound Engineering",
     desc: "High-quality audio production and post-processing for media.",
+  },
+];
+export const AUDIO_SAMPLES = [
+  {
+    title: "Leon Timbo  IN THE PRESENCE OF THE LORD Medley Worship Experience",
+    desc: "A moment of worship and praise.",
+    duration: "20:52",
+    link: "https://drive.google.com/file/d/1TOq1GPnRXcqxFjjpUSY-M1yxWaDETNtl/view?usp=sharing",
+    category: "Worship"
+  },
+  {
+    title: "Urban Rhythm",
+    desc: "Upbeat percussion-heavy track for a brand commercial.",
+    duration: "1:30",
+    link: "YOUR_GOOGLE_DRIVE_FILE_ID_2",
+    category: "Music Production"
+  },
+  {
+    title: "Podcast Intro",
+    desc: "Professional intro sequence with voiceover and background music.",
+    duration: "0:45",
+    link: "YOUR_GOOGLE_DRIVE_FILE_ID_3",
+    category: "Mixing"
+  },
+];
+export const VIDEO_REELS = [
+  {
+    title: "Brand Story Reel",
+    desc: "Dynamic montage for a fashion brand launch.",
+    link: "YOUR_GOOGLE_DRIVE_VIDEO_ID_1",
+    thumbnail: "https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=1000",
+  },
+  {
+    title: "Event Highlight",
+    desc: "Fast-paced recap of a corporate gala event.",
+    link: "YOUR_GOOGLE_DRIVE_VIDEO_ID_2",
+    thumbnail: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1000",
+  },
+  {
+    title: "Motion Graphics",
+    desc: "Explainer video featuring custom 2D animations.",
+    link: "YOUR_GOOGLE_DRIVE_VIDEO_ID_3",
+    thumbnail: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000",
+  },
+  {
+    title: "Travel Vlog",
+    desc: "Cinematic vertical cut of a safari adventure.",
+    link: "YOUR_GOOGLE_DRIVE_VIDEO_ID_4",
+    thumbnail: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1000",
   },
 ];

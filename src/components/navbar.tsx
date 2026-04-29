@@ -31,10 +31,10 @@ export default function Navbar() {
       {/* Desktop Navbar (Top) */}
       <nav className={cn(
         "fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-500 hidden md:block",
-        scrolled ? "top-4 w-[95%] max-w-2xl" : "top-8 w-[90%] max-w-4xl"
+        scrolled ? "top-4 w-[95%] max-w-3xl" : "top-8 w-[90%] max-w-4xl"
       )}>
         <div className={cn(
-          "glass rounded-full px-6 h-16 flex items-center justify-between flex-wrap gap-2 border-white/5 shadow-2xl transition-all duration-500",
+          "glass rounded-full px-6 h-16 flex items-center justify-between gap-2 border-white/5 shadow-2xl transition-all duration-500 whitespace-nowrap",
           scrolled ? "bg-background/40 backdrop-blur-[40px] py-3" : "bg-transparent"
         )}>
           <Link href="#home" className="flex items-center gap-2 group">
@@ -63,10 +63,10 @@ export default function Navbar() {
                 href={LINKS.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ml-2 p-2 rounded-full glass hover:bg-green-500/20 hover:border-green-500/40 transition-all group"
+                className="ml-2 p-2 rounded-full glass hover:bg-accent/20 hover:border-accent/40 transition-all group"
               >
                 <img
-                  src="https://cdn.simpleicons.org/whatsapp/25D366"
+                  src="https://cdn.simpleicons.org/whatsapp/ffffff"
                   alt="WhatsApp"
                   className="w-4 h-4"
                 />

@@ -25,7 +25,12 @@ const TOOLS = [
   { name: "After Effects", slug: "adobeaftereffects", category: "Design" },
   { name: "FL Studio", slug: "flstudio", category: "Sound" },
   { name: "Yamaha", slug: "yamaha", category: "Sound" },
-  { name: "Dante", slug: "audinate", category: "Sound" },
+  { 
+    name: "Dante", 
+    slug: "audinate", 
+    category: "Sound", 
+    icon: "https://upload.wikimedia.org/wikipedia/commons/b/b9/Dante_logo.svg" 
+  },
   { name: "Logic Pro", slug: "apple", category: "Sound" },
   { name: "Git", slug: "git", category: "Technical" },
   { name: "VS Code", slug: "visualstudiocode", category: "Technical" },
@@ -62,7 +67,7 @@ export default function Tools() {
           >
             <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-white/5 flex items-center justify-center mb-3 group-hover:bg-accent/20 transition-colors">
               <img
-                src={`https://cdn.simpleicons.org/${tool.slug}/ffffff`}
+                src={(tool as any).icon || `https://cdn.simpleicons.org/${tool.slug}/ffffff`}
                 alt={tool.name}
                 className="w-5 h-5 md:w-6 md:h-6 object-contain opacity-60 group-hover:opacity-100 transition-opacity"
               />

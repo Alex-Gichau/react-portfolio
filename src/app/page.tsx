@@ -21,6 +21,8 @@ import Skills from "@/components/sections/skills";
 import Tools from "@/components/sections/tools";
 import ExperienceTimeline from "@/components/sections/experience";
 import Projects from "@/components/sections/projects";
+import AudioSection from "@/components/sections/audio";
+import VideoSection from "@/components/sections/video";
 import Contact from "@/components/sections/contact";
 import Magnetic from "@/components/magnetic";
 import ResumeButton from "@/components/resume-button";
@@ -205,6 +207,8 @@ export default function Home() {
         <Tools />
         <ExperienceTimeline />
         <Projects />
+        <AudioSection />
+        <VideoSection />
         <Contact />
       </div>
 

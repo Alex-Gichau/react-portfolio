@@ -23,7 +23,7 @@ export default function Experience() {
 
       <div className="relative max-w-5xl mx-auto">
         {/* The central vertical line for desktop */}
-        <div className="hidden md:block absolute top-0 bottom-0 left-1/2 w-[1px] bg-white/5 -translate-x-1/2" />
+        <div className="hidden md:block absolute top-0 bottom-0 left-1/2 w-[2px] bg-accent/50 -translate-x-1/2" />
         {/* The left vertical line for mobile */}
         <div className="md:hidden absolute top-0 bottom-0 left-[19px] w-[1px] bg-white/5" />
 
